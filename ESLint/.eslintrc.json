@@ -1,0 +1,53 @@
+{
+    /* 코드가 실행될 환경 지정 */
+    "env": {
+        "browser": true, // 브라우저 환경
+        "es2021": true, // 최신 ECMAScript 기능 사용
+        "node": true // Node.js 환경
+    },
+
+    /* 기본 설정을 확장 */
+    "extends": [
+        "eslint:recommended", // ESLint의 권장 설정
+        "plugin:@typescript-eslint/recommended", // TypeScript ESLint 플러그인의 권장 설정
+        "plugin:react/recommended", // React ESLint 플러그인의 권장 설정
+        "plugin:react-hooks/recommended", // React Hooks ESLint 플러그인의 권장 설정
+        "plugin:jsx-a11y/recommended", // 접근성을 위한 JSX-a11y 플러그인의 권장 설정
+        "plugin:prettier/recommended" // Prettier와 ESLint 통합
+    ],
+
+    /* TypeScript 코드를 분석할 파서를 지정 */
+    "parser": "@typescript-eslint/parser", // TypeScript ESLint 파서
+
+    /* 파서 옵션 설정 */
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        }, // JSX를 지원하도록 설정
+        "ecmaVersion": 12, // ECMAScript 버전
+        "sourceType": "module", // 모듈 시스템
+        "parser": "@typescript-eslint/parser" // ESLint가 TypeScript 문법을 이해할 수 있도록 설정
+    },
+
+    /* 사용할 플러그인 지정 */
+    /* react -->  React ESLint 플러그인 */
+    /* @typescript-eslint --> TypeScript ESLint 플러그인 */
+    /* jsx-a11y --> 접근성을 위한 JSX-a11y 플러그인 */
+    "plugins": ["react", "@typescript-eslint", "jsx-a11y"],
+
+    /* 사용자 정의 규칙 */
+    "rules": {
+        "react/react-in-jsx-scope": "off", // React에 스코프를 포함 Y/N
+        "@typescript-eslint/explicit-module-boundary-types": "off", // 함수 및 메서드의 반환 타입을 명시적으로 정의 Y/N
+        "@typescript-eslint/no-explicit-any": "warn", // "any" 타입 사용을 경고로 설정
+        "react/prop-types": "off", // PropTypes 사용 Y/N
+        "prettier/prettier": ["error", { "endOfLine": "auto" }] // Prettier와 ESLint 간 충돌을 방지하고, 특정 Prettier 설정을 적용
+    },
+
+    /* React의 버전을 자동으로 감지하도록 설정 */
+    "settings": {
+        "react": {
+            "version": "detect"
+        } // 'detect'로 설정하여 자동 감지
+    }
+}
