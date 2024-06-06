@@ -323,3 +323,7 @@ Snowpack은 production을 위한 번들러를 선택할 수 있다(webpack, roll
 이로 인해서 MPA(Multi-Page-App), 자동 css spliting, 비동기 청크 로딩, auto polifill import 지원을 통해 snowpack 보다 넓은 범위의 기능을 지원할 수 있게 되었다.
 
 ![alt text](image.png)
+
+
+> 참고자료 및 출처
+> https://deemmun.tistory.com/88?category=901244
